@@ -1,44 +1,24 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Camisa",
-      "price": 59.9
+      "name": "Leandro Santana ",
+      "price": "244412",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Calça vermelha",
-      "price": 90
+      "name": "LEANDRO DE BRITO SANTANA",
+      "price": "53453",
+      "id": 2
     },
     {
-      "id": 3,
-      "name": "Boné aba reta",
-      "price": 29.9
+      "name": "Leandro Santana ",
+      "price": "frvr",
+      "id": 3
     },
     {
-      "name": "banana",
-      "price": "23",
+      "name": "Teste ",
+      "price": "666",
       "id": 4
-    },
-    {
-      "name": "Maça",
-      "price": "50,99",
-      "id": 5
-    },
-    {
-      "name": "moto",
-      "price": "9",
-      "id": 6
-    },
-    {
-      "name": "teclado",
-      "price": "110",
-      "id": 7
-    },
-    {
-      "name": "casa",
-      "price": "110",
-      "id": 8
     }
   ]
 }
