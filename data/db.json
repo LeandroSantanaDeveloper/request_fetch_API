@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": 2,
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": 3,
+      "name": "Boné aba reta",
+      "price": 29.9
+    },
+    {
+      "name": "banana",
+      "price": "23",
+      "id": 4
+    },
+    {
+      "name": "Maça",
+      "price": "50,99",
+      "id": 5
+    },
+    {
+      "name": "moto",
+      "price": "9",
+      "id": 6
+    },
+    {
+      "name": "teclado",
+      "price": "110",
+      "id": 7
+    },
+    {
+      "name": "casa",
+      "price": "110",
+      "id": 8
+    }
+  ]
+}
