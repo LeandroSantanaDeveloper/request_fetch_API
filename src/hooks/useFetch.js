@@ -14,6 +14,8 @@ export const useFetch = (url) => {
 
     const [error, setError] = useState(null)
 
+    const [itemId, setItemId] = useState(null)
+
 
 
     const httpConfig = (data, method) => {
@@ -26,6 +28,16 @@ export const useFetch = (url) => {
                 body: JSON.stringify(data)
             })
             setMethod(method)
+        }
+        if (method === "DELETE") {
+            setConfig({
+                method,
+                headers: {
+                    "content-type": "aplication/json"
+                }
+            })
+            setMethod(method)
+            setItemId(data)
         }
     }
 
@@ -60,7 +72,17 @@ export const useFetch = (url) => {
                 const json = await res.json()
 
                 setCallFetch(json)
+
+            } else if (method === "DELETE") {
+                const deleteUrl = `${url}/${itemId}`
+
+                const res = await fetch(deleteUrl, config)
+
+                const json = await res.json()
+
+                setCallFetch(json)
             }
+           
         }
         send()
     }, [config, method, url])

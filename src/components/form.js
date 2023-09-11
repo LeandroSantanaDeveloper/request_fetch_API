@@ -68,6 +68,25 @@ const Form = () => {
 
   }
 
+  const handreDelete = async (id) => {
+    try {
+      const res = await fetch(`${url}/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-type': 'application/json',
+        },
+      });
+
+      if (!res.ok) {
+        throw new Error('Falha ao excluir o produto.');
+      }
+
+      setProduct(products.filter((product) => product.id !== id));
+    } catch (error) {
+      setError('Houve um erro ao excluir o produto.');
+    }
+  };
+
   return (
     <>
       <div className="add-products">
@@ -81,7 +100,10 @@ const Form = () => {
             :
             <ul>
               {products.map((product) => (
-                <li key={product.id}>{product.name} -  R$: {product.price}</li>
+                <li 
+                key={product.id}>{product.name} -  R$: {product.price}
+                <button onClick={() => handreDelete(product.id)}>Excluir</button>
+                </li>
               ))}
             </ul>}
 
@@ -106,8 +128,6 @@ const Form = () => {
 
           </form>
         </div>
-
-
       </div>
     </>
   )

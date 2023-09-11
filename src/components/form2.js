@@ -26,6 +26,12 @@ const Form2 = () => {
         setPrice("")
 
     }
+
+
+    const handleDelete = (id) => {
+        httpConfig(id, "DELETE")
+    }
+
     return (
         <>
             <div className="add-products">
@@ -39,7 +45,10 @@ const Form2 = () => {
                         :
                         <ul>
                             {items && items.map((product) => (
-                                <li key={product.id}>{product.name} -  R$: {product.price}</li>
+                                <li 
+                                key={product.id}>{product.name}  -  R$: {product.price}
+                                <button onClick={() => handleDelete(product.id)}>Excluir</button>
+                                </li>
                             ))}
                         </ul>}
 
